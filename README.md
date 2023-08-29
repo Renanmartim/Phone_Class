@@ -18,3 +18,64 @@
     <li>Internet Browser: displayPage, addNewTab, updatePage</li>
 </ul>
 
+```mermaid
+
+classDiagram
+  class iPhone {
+    +playMusic()
+    +makePhoneCall()
+    +browseInternet()
+  }
+
+  class MusicPlayer {
+    +playMusic()
+  }
+
+  class Phone {
+    +makePhoneCall()
+  }
+
+  class InternetBrowser {
+    +browseInternet(Site: Site)
+  }
+
+  class Contact {
+    + String name;
+    + int number;
+  }
+
+  class ContactDatabase {
+    + Connection connection
+    + createTableIfNotExists()
+    + saveContact(Contact contact)
+    - contactExists(String name)
+    + allContacts()
+    + updateContactPhoneNumber(String contactName, Integer newPhoneNumber)
+    + deleteContactByName(String contactName)
+    + close()
+  }
+
+  class Telephone {
+    + Contact contact
+    + ContactDatabase cd
+    + callNumber(int number)
+    + void allContacts()
+    + void saveContact()
+    + void UpdateContact(String name, int number)
+    + void deleteContact(String name)
+  }
+
+  class Site {
+    GOOGLE
+    FACEBOOK
+  }
+
+  iPhone * ..> MusicPlayer
+  iPhone * ..> Phone
+  iPhone * ..> InternetBrowser
+  Phone ..> Telephone
+  Telephone ..> ContactDatabase
+  ContactDatabase ..> Contact
+
+```
+
