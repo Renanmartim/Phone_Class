@@ -1,6 +1,6 @@
 <h1>OOP Challenge</h1>
 
-<h2>challenge posed by: https://github.com/glysns in a course of hatred. Database connection via jdbc was used.</h2>
+<h2>challenge posed by: https://github.com/glysns in a course of DIO. Database connection via jdbc was used.</h2>
 
 <p>Modeling and diagramming of the representation in UML and Code with regard to the iPhone component.</p>
 
